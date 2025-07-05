@@ -8,6 +8,6 @@ public class ScannerExam {
         System.out.println("당신의 나이는 " + a.nextInt() + "살입니다.");
         System.out.println("당신의 체중은 " + a.nextDouble() + "kg입니다.");
         System.out.println("당신의 신장은 " + a.nextDouble() + "cm입니다.");
-        // next(), nextInt(), nextDouble() 등 여러 데이터 타입에 따라 다름
+        // Scanner 의 메소드: String next(), byte nextByte(), int nextInt(), double nextDouble() 등
     }
 }
