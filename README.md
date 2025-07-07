@@ -14,4 +14,4 @@
 
 ---
 
-🛠️ 프로젝트는 IntelliJ IDEA에서 실행되며, 각 챕터는 `src/chapter0X` 패키지로 구성되어 있습니다.
+🛠️ 프로젝트는 IntelliJ에서 실행되며, 각 챕터는 `src/chapter0X` 패키지로 구성되어 있습니다.
