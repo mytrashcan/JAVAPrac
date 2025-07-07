@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-8
 public class UnaryOperator {
     public static void main(String[] args) {

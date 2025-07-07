@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-3
 import java.io.*;
 public class InputExample {

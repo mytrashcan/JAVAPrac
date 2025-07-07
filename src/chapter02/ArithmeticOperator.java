@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-5
 import java.util.Scanner;
 public class ArithmeticOperator {

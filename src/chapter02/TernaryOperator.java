@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-9
 public class TernaryOperator {
     public static void main(String[] args) {

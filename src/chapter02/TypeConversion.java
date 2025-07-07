@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-2
 public class TypeConversion {
     public static void main(String[] args) {

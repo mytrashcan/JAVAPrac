@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-7
 public class LogicalOperator {
     public static void main(String[] args) {

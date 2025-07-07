@@ -1,3 +1,5 @@
+package chapter01;
+
 // Example
 public class Hello2030 {
     public static void main(String[] args){

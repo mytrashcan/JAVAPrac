@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-13
 public class GradeSwitch {
     public static void main(String[] args) {

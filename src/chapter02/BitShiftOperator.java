@@ -1,3 +1,5 @@
+package chapter02;
+
 // 예제 2-6
 public class BitShiftOperator {
     public static void main(String[] args) {
