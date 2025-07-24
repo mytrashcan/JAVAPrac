@@ -2,11 +2,20 @@ package chapter04;
 
 // 예제 4-1
 public class Goods {
-    String name;
-    int price;
-    int numberOfStock;
-    int sold;
+    private String name;
+    private int price;
+    private int numberOfStock;
+    private int sold;
 
+    Goods(String n, int p, int nStack, int s){
+        name = n; price = p; numberOfStock = nStack; sold = s;
+    }
+
+    String getName() {return name;}
+    int getPrice() {return price;}
+    int getNumberOfStock() {return numberOfStock;}
+    int getSold() {return sold;}
+    /*
     public static void main(String[] args) {
         Goods camera = new Goods();
 
@@ -20,4 +29,5 @@ public class Goods {
         System.out.println("상품 재고: " + camera.numberOfStock);
         System.out.println("상품 판매: " + camera.sold);
     }
+    */
 }
