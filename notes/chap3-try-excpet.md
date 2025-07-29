@@ -6,7 +6,7 @@
 - 실행 중 발생하는 에러는 컴파일러가 알 수 없음
 - 자바는 실행 중 발생하는 에러를 예외로 처리
 - 예외를 처리하지 않을 시 예외가 발생한 프로그램은 강제 종료
-```
+```java
 import java.util.Scanner;
 public class ExceptionExample1 {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 at chapter03.ExceptionExample1.main(ExceptionExample1.java:16)
 
 ### 예외 처리문 try-catch-finally
-```
+```java
 try{
     예외가 발생할 가능성이 있는 실행문(try 블록)
 }

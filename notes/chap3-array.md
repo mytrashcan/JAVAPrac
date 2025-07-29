@@ -9,25 +9,25 @@
 
 ## 배열의 선언 및 생성
 ### 배열 선언
-```
+```java
 int[] intArray; // int intArray[]; 도 가능
 char[] charArray; // char charArray[]; 도 가능
 ```
 ### 배열 생성
-```
+```java
 intArray = new int[10];   // 또는 int[] intArray = new int[10];
 charArray = new char[10]; // 또는 char[] charArray = new char[10];
 ```
 ### 선언과 초기화
-```
+```java
 int[] intArray = {0,1,2,3,4,5,6,7,8,9}; // 총 10개의 정수 배열 생성 및 값 초기화
 ```
 ### 잘못된 배열 선언
-```
+```java
 int intArray[10]; // 컴파일 오류, 배열의 크기를 지정할 수 없음
 ```
 ### 배열 참조
-```
+```java
 int[] intArray = new int[5];
 int[] myArray = intArray; // myArray와 intArray는 같은 배열을 가리킴 (얕은 복사)
 
@@ -35,7 +35,7 @@ intArray[1] = 2;
 myArray[1] = 6;  
 ```
 ### 배열 원소 접근
-```
+```java
 int[] intArray;
 intArray[4] = 8; // 오류, intArray 배열의 메모리 할당 X
 
@@ -45,7 +45,7 @@ int n = intArray[3]; // 배열의 값 읽기
 ```
 ### 배열 인덱스
 - 인덱스는 0 부터 시작하며, 마지막 인덱스는 (배열의 크기 - 1) 임
-```
+```java
 int[] intArray = new int[5]; // 인덱스는 0 ~ 4
 int n = intArray[-2]; // 실행 오류, -2 는 인덱스로 적합하지 않음
 int m = intArray[5]; // 실행 오류, 5는 인덱스의 범위를 넘었음
@@ -53,38 +53,38 @@ int m = intArray[5]; // 실행 오류, 5는 인덱스의 범위를 넘었음
 ### 배열 크기
 - 배열의 크기는 배열 생성 시 결정되며, 나중에 바꿀 수 없음
 - 배열의 크기는 배열의 length 필드에 저장됨
-```
+```java
 int size = intArray.length; // 배열의 크기 리턴
 ```
 ### 배열과 for-each 문
-```
+```java
 int[] num = {1,2,3,4,5};
 int sum = 0;
 for(int k : num) // 반복될 때마다 k에 num[0]...num[4] 값으로 설정
     sum += k;
 System.out.print("합은 " + sum);
 ```
-```
+```java
 String[] names = {"사과", "배", "바나나", "체리", "딸기"};
 for (String s : names) // 반복될 때마다 s에 names[0]...names[4] 값으로 설정
     System.out.print(s + ' ');
 ```
-```
+```java
 // enum: 열거형 타입 정의
 enum Week {월, 화, 수, 목, 금, 토, 일};
 for (Week day: Week.values()) // 반복될 때마다 day는 월...금 으로 설정
     System.out.print(day + "요일 ");
 ```
 ### 2차원 배열 선언
-```
+```java
 int[][] intArray;
 ```
 ### 2차원 배열 생성
-```
+```java
 int[][] intArray = new int[2][5];
 ```
 ### 2차원 배열 초기화
-```
+```java
 int[][] matrix = {
     {1, 2, 3},
     {4, 5, 6}
@@ -92,7 +92,7 @@ int[][] matrix = {
 System.out.println(matrix[1][2]); // 6
 ```
 ### 2차원 배열의 크기
-```
+```java
 int[][] i = new int[2][5];
 int size1 = i.length; // 2, 2차원 배열의 행의 개수
 int size2 = i[0].length; // 5, 0 번째 행의 열의 개수
@@ -100,12 +100,12 @@ int size3 = i[1].length; // 5, 1 번째 행의 열의 개수
 ```
 ### 정방형 배열
 - 각 행이 모두 동일한 열의 개수를 가짐
-```
+```java
 int[][] i = new int[4][4];
 ```
 ### 비정방형 배열
 - 각 행이 서로 다른 열의 개수를 가짐
-```
+```java
 int[][] i = new int[4][];
 i[0] = new int[1];
 i[1] = new int[2];
@@ -114,7 +114,7 @@ i[3] = new int[4];
 ```
 - new int[4][]는 행의 개수만 지정하고, 열은 각 행마다 개별적으로 할당하는 구조.
 ### 메소드에서 배열 리턴
-```
+```java
 int[] makeArray(){
     int[] temp = new int[4];
     for(int i = 0; i < temp.length; i++)
