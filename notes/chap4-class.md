@@ -174,3 +174,97 @@ class StaticSample{
 
 ### static의 활용
 - 전역 변수와 전역 함수를 만들 때 사용, 이때 자바의 캡슐화 원칙을 지킴
+```java
+// 객체의 멤버로 접근하는 방법
+class StaticSample{
+    public int n;
+    
+    public void g() {m = 20;}
+    public void h() {m = 30;}
+    
+    public static int m;
+    public static void f() {m = 5;}
+    
+    public class Ex{
+        public static void main(String[] args){
+            StaticSample s1, s2;
+            s1 = new StaticSample();
+            s1.n = 5;
+            s1.g();
+            s1.m = 50; // static
+            
+            s2 = new StaticSample();
+            s2.n = 8;
+            s2.h();
+            s2.f(); // static
+            System.out.println(s1.m);            
+        }
+    }
+}
+```
+```java
+// 클래스 이름으로 접근하는 방법
+class StaticSample{
+    public int n;
+
+    public void g() {m = 20;}
+    public void h() {m = 30;}
+
+    public static int m;
+    public static void f() {m = 5;}
+
+    public class Ex{
+        public static void main(String[] args){
+            StaticSample.m = 10;
+            
+            StaticSample s1;
+            s1 = new StaticSample();
+            System.out.println(s1.m);
+            s1.f();
+            StaticSample.f();
+        }
+    }
+}
+```
+
+### static의 제약 조건
+- static 메소드는 오직 static 멤버에만 접근 가능
+- static 메소드는 this 키워드 사용 불가
+- 그 이유는 객체가 생성되기 전에 static 메서드가 실행될 수 있기 때문
+- 즉, non-static 멤버에서 static 멤버에 접근하는 것은 가능하지만, static 메서드에서는 non-static 멤버에 접근할 수 없다.
+
+## final 클래스와 메소드
+- final 클래스: 더 이상 클래스 상속 불가능
+- final 메소드: 더 이상 오버라이딩 불가능
+```java
+final class FinalClass{
+    ...
+}
+class DerivedClass Extends FinalClass { // 컴파일 오류
+    ...
+}
+
+public class SuperClass{
+    protected final int finalMethod() {...}
+}
+class DerivedClass extgends SuperClass{
+    protected final int finalMethod() {...} // 컴파일 오류, 오버라이딩 불가
+}
+```
+## final 필드
+- final 필드: 상수를 선언할 때 사용, 선언 시 초기 값을 지정해야한다
+```java
+class SharedClass{
+    public static final double PI = 3.14;
+}
+```
+```java
+public class FinalFieldClass{
+    final int ROWS = 10; // 상수 선언 및 초기 값(10) 지정
+    
+    void f(){
+        int[] intArray = new int[ROWS];
+        ROWS = 30; // 컴파일 오류 발생, final 필드의 값을 변경할 수 없다
+    }
+}
+```
